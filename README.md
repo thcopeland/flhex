@@ -1,18 +1,18 @@
-# About
+## About
 
 `flhex` is a simple, fast tool to flatten Intel HEX files. That is, it takes a HEX file containing several separate sections and outputs a HEX file containing a single, longer section, padded where necessary.
 
-In an ideal world, `flhex` would not be necessary. At the time of writing, however, the bootloader installed on Arduino Mega microcontrollers will incorrectly erase flash pages unless the flash memory is sent as a single, continuous partition. Ultimately, you probably should fix this by uploading a patched bootloader or just programming over SPI (relatively slow). `flhex` provides an easy workaround, however.
+In an ideal world, `flhex` would not be necessary. At the time of writing, however, the bootloader installed on Arduino Mega microcontrollers will incorrectly erase flash pages unless the flash memory is sent as a single, continuous partition. Ultimately, you probably should fix this by flashing a patched bootloader or just programming over SPI (relatively slow). In the meantime, `flhex` provides an easy workaround.
 
-# Installation
+## Installation
 
-Download the most recent version for your operating system from the Releases page. If you're using Windows, choose the `i686_windows.zip` version if you're running a 32-bit operating system, otherwise, `x86_64_windows.zip`. If you're using 64-bit Linux, download the `x86_64_linux.tar` file. Then unzip or untar the file, and you're ready to go.
+Download the most recent version for your operating system from the [Releases](https://github.com/thcopeland/flhex/releases) page. If you're using Windows, choose the `i686_windows.zip` version if you're running a 32-bit operating system, otherwise, `x86_64_windows.zip`. If you're using 64-bit Linux, download the `x86_64_linux.tar` file. Then unzip/untar the file, and you're ready to go.
 
 To build from source, clone the repository or download the source code from the Releases page. Then `cd` to the `flhex/` directory, and run `make` to compile `flhex`. If you're using Windows, the process is essentially the same, except you'll have to use MSVC or something.
 
-# Usage
+## Usage
 
-`flhex` takes a single input file and several options.
+`flhex` accepts a single input file and several options.
 ```
  $ flhex file.hex                       # flatten file.hex and output to out.hex
  $ flhex file.hex -o file2.hex          # output to file2.hex
@@ -23,7 +23,7 @@ To build from source, clone the repository or download the source code from the 
 
 Other than `-o/--output`, the default values for each option are probably the best.
 
-# License (MIT)
+## License (MIT)
 
 Copyright 2023 Tom Copeland.
 
